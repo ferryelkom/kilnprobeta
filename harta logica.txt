@@ -1,0 +1,31 @@
+                      +--------------------+
+                      | start calcul duty  |
+                      +---------+----------+
+                                |
+                +---------------v----------------+
+                | time\_since\_off < min\_ssr\_off ?  |
+                +---------------+----------------+
+                                | yes -> duty=0
+                               no
+                                |
+                +---------------v----------------+
+                | mode == 'hold' ?                |
+                +---------------+----------------+
+               yes              no
+                |                |
++---------------v---+      +-------v------------------+
+| error = tgt-cur    |      | seg.ramp\_rate > 0 ?      |
++---------------+----+      +----------+---------------+
+                |                       | yes         | no
+if error>0 ->   |                       |             |
+duty = 12 + 0.4*error  clamp(8,45)      |   +---------v---------+
+else duty=0                             |   | seg.ramp\_rate == 0 |
+                                       |   +---------+----------+
+                                       |             |
+                  base = 3*required\_rate            yes -> (maintain)
+                  rate\_error = required\_rate - rate        |
+                  duty = base + boost*6 + rate\_error*2     if error>0: duty=12+0.3*error clamp(10,35)
+                  clamp(25,95)                             else duty=0
+                                       |
+                                       no -> duty=0
+                                       
