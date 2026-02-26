@@ -1,0 +1,208 @@
+>>> %Run -c $EDITOR_CONTENT
+
+MPY: soft reboot
+Boot OK
+WiFi connecting...
+✅ WiFi IP: 192.168.1.150
+connectat cu succes 192.168.1.150
+💾 LOADED config.json: R | offset=+0.0°C
+🔥 MAX31856 PRO - R | Offset +0.0°C
+✅ READY | config.json OK pentru WebUI
+✅ Sensor R-type: {'offset': 0.0, 'raw': 333.6, 'temp': 333.6, 'config': {'offset': 0.0, 'type_name': 'R', 'status': 'saved', 'type_code': 5}, 'cj': 27.5, 'delta': 306.1, 'type': 'R', 'type_code': 5}
+🔗 Accesează WebUI la: http://192.168.1.150
+
+================================================================================================
+  KILNPRO BETA v6.6 — PROFIL ARDERE CERAMICA (FIX RAMP)
+================================================================================================
+  Seg 1 | RAMP | Target: 150.0C | 60 min | Start: 0 min | Stop: 60 min | Rata: N/A (T>target)
+  Seg 2 | HOLD | Target: 150.0C | 180 min | Start: 60 min | Stop: 240 min | Mentinere ±2C
+  Seg 3 | RAMP | Target: 370.0C | 60 min | Start: 240 min | Stop: 300 min | Rata: 3.67C/min
+  Seg 4 | HOLD | Target: 370.0C | 120 min | Start: 300 min | Stop: 420 min | Mentinere ±2C
+  Seg 5 | RAMP | Target: 750.0C | 120 min | Start: 420 min | Stop: 540 min | Rata: 3.17C/min
+  Seg 6 | HOLD | Target: 750.0C | 240 min | Start: 540 min | Stop: 780 min | Mentinere ±2C
+  TOTAL: ~780 min ≈ 13.0 ore
+================================================================================================
+
+--------------------------------------------------------------------------------
+  [RESUME-RAMP] RESUME Seg3 | T=333.6C → 370.0C
+  Segmente skipped: Seg1, Seg2
+  Rata recalculata: 0.61C/min | ETA: 60min
+  Hold resume = durata completa 60min (safe dupa power loss)
+--------------------------------------------------------------------------------
+
+🔍 STABILIZARE 20s | T=333.6C → RESUME Seg3 | T=333.6C → 370.0C
+
+==============================================================================================================
+   MIN | Tcur    | Ttgt    |  ERR    | RATE  | ON    | SSR | SEG      | SegRem   | ProgRem  | COMP
+==============================================================================================================
+0m | 333.6 | 370.0 | +36.4 | +0.0 | 0.0s | OFF | S3-STAR | SegRem:60.0m | ProgRem:780.0m | +0.0%
+0m | 333.4 | 370.0 | +36.6 | -1.09 | 0.0s | OFF | S3-STAR | SegRem:60.0m | ProgRem:779.8m | +0.0%
+
+🚀 SEG3 RAMP [RESUME] 333.3C → 370.0C | 0.61C/min | ETA: 60min
+🔥 SSR ON 0.5s | T=333.3C | 5.0% [+0.0%] | Base=5.0%
+0m | 333.3 | 333.3 | +0.0 | -0.86 | 0.5s | ON  | S3-RAMP | SegRem:60.0m | ProgRem:779.6m | +0.0%  user conclusion rezulta fail segmet rem:60- nu a estimat ca si cum new start nu resume de la 333.4 grade !
+🔥 SSR ON 0.8s | T=333.1C | 8.0% [+0.0%] | Base=8.0%
+0m | 333.1 | 333.4 | +0.3 | -0.97 | 0.8s | ON  | S3-RAMP | SegRem:59.8m | ProgRem:779.5m | +0.0%
+🔥 SSR ON 1.1s | T=332.9C | 11.0% [+0.0%] | Base=11.0%
+0m | 332.9 | 333.5 | +0.6 | -1.02 | 1.1s | ON  | S3-RAMP | SegRem:59.7m | ProgRem:779.3m | +0.0%
+🔥 SSR ON 1.3s | T=332.8C | 13.0% [+0.0%] | Base=13.0%
+0m | 332.8 | 333.61 | +0.81 | -0.94 | 1.3s | ON  | S3-RAMP | SegRem:59.5m | ProgRem:779.2m | +0.0%
+🔥 SSR ON 1.4s | T=332.8C | 14.0% [+0.0%] | Base=14.0%
+1m | 332.8 | 333.71 | +0.91 | -0.79 | 1.4s | ON  | S3-RAMP | SegRem:59.3m | ProgRem:779.0m | +0.0%
+🔥 SSR ON 4.4s | T=332.4C | 44.0% [+0.0%] | Base=40.0%
+1m | 332.4 | 333.81 | +1.41 | -1.01 | 4.4s | ON  | S3-RAMP | SegRem:59.2m | ProgRem:778.8m | +0.0%
+🔥 SSR ON 4.5s | T=332.3C | 45.0% [+0.0%] | Base=40.0%
+1m | 332.3 | 333.91 | +1.61 | -0.96 | 4.5s | ON  | S3-RAMP | SegRem:59.0m | ProgRem:778.6m | +0.0%
+🔥 SSR ON 4.9s | T=332.1C | 49.0% [+8.0%] | Base=40.0%
+1m | 332.1 | 334.01 | +1.91 | -0.99 | 4.9s | ON  | S3-RAMP | SegRem:58.8m | ProgRem:778.5m | +8.0%
+🔥 SSR ON 5.0s | T=332.1C | 50.0% [+7.8%] | Base=40.0%
+1m | 332.1 | 334.12 | +2.02 | -0.87 | 5.0s | ON  | S3-RAMP | SegRem:58.7m | ProgRem:778.3m | +7.8%
+🔥 SSR ON 5.1s | T=331.9C | 51.0% [+7.8%] | Base=40.0%
+1m | 331.9 | 334.22 | +2.32 | -0.93 | 5.1s | ON  | S3-RAMP | SegRem:58.5m | ProgRem:778.2m | +7.8%
+🔥 SSR ON 5.2s | T=331.7C | 52.0% [+7.7%] | Base=40.0%
+2m | 331.7 | 334.32 | +2.62 | -0.93 | 5.2s | ON  | S3-RAMP | SegRem:58.3m | ProgRem:778.0m | +7.7%
+🔥 SSR ON 5.3s | T=331.4C | 53.0% [+7.8%] | Base=40.0%
+2m | 331.4 | 334.42 | +3.02 | -1.0 | 5.3s | ON  | S3-RAMP | SegRem:58.2m | ProgRem:777.8m | +7.8%
+🔥 SSR ON 5.3s | T=331.4C | 53.0% [+7.7%] | Base=40.0%
+2m | 331.4 | 334.52 | +3.12 | -0.93 | 5.3s | ON  | S3-RAMP | SegRem:58.0m | ProgRem:777.6m | +7.7%
+🔥 SSR ON 5.4s | T=331.3C | 54.0% [+7.9%] | Base=40.0%
+2m | 331.3 | 334.63 | +3.33 | -1.0 | 5.4s | ON  | S3-RAMP | SegRem:57.8m | ProgRem:777.5m | +7.9%
+🔥 SSR ON 5.4s | T=331.2C | 54.0% [+7.7%] | Base=40.0%
+2m | 331.2 | 334.73 | +3.53 | -0.8 | 5.4s | ON  | S3-RAMP | SegRem:57.7m | ProgRem:777.3m | +7.7%
+🔥 SSR ON 5.6s | T=330.9C | 56.0% [+7.7%] | Base=40.0%
+2m | 330.9 | 334.83 | +3.93 | -0.93 | 5.6s | ON  | S3-RAMP | SegRem:57.5m | ProgRem:777.2m | +7.7%
+🔥 SSR ON 5.6s | T=331.0C | 56.0% [+7.5%] | Base=40.0%
+3m | 331.0 | 334.94 | +3.94 | -0.73 | 5.6s | ON  | S3-RAMP | SegRem:57.3m | ProgRem:777.0m | +7.5%
+🔥 SSR ON 5.7s | T=330.8C | 57.0% [+7.4%] | Base=40.0%
+3m | 330.8 | 335.04 | +4.24 | -0.86 | 5.7s | ON  | S3-RAMP | SegRem:57.2m | ProgRem:776.8m | +7.4%
+🔥 SSR ON 5.7s | T=330.7C | 57.0% [+7.2%] | Base=40.0%
+3m | 330.7 | 335.16 | +4.46 | -0.78 | 5.7s | ON  | S3-RAMP | SegRem:57.0m | ProgRem:776.6m | +7.2%
+🔥 SSR ON 5.8s | T=330.6C | 58.0% [+7.1%] | Base=40.0%
+3m | 330.6 | 335.26 | +4.66 | -0.72 | 5.8s | ON  | S3-RAMP | SegRem:56.8m | ProgRem:776.4m | +7.1%
+🔥 SSR ON 5.8s | T=330.5C | 58.0% [+6.7%] | Base=40.0%
+3m | 330.5 | 335.36 | +4.86 | -0.59 | 5.8s | ON  | S3-RAMP | SegRem:56.6m | ProgRem:776.3m | +6.7%
+🔥 SSR ON 5.9s | T=330.5C | 59.0% [+6.6%] | Base=40.0%
+3m | 330.5 | 335.46 | +4.96 | -0.59 | 5.9s | ON  | S3-RAMP | SegRem:56.5m | ProgRem:776.1m | +6.6%
+🔥 SSR ON 5.9s | T=330.5C | 59.0% [+6.3%] | Base=40.0%
+4m | 330.5 | 335.56 | +5.06 | -0.52 | 5.9s | ON  | S3-RAMP | SegRem:56.3m | ProgRem:776.0m | +6.3%
+🔥 SSR ON 5.9s | T=330.4C | 59.0% [+6.0%] | Base=40.0%
+4m | 330.4 | 335.67 | +5.27 | -0.52 | 5.9s | ON  | S3-RAMP | SegRem:56.1m | ProgRem:775.8m | +6.0%
+🔥 SSR ON 6.0s | T=330.2C | 60.0% [+5.7%] | Base=40.0%
+4m | 330.2 | 335.78 | +5.58 | -0.45 | 6.0s | ON  | S3-RAMP | SegRem:56.0m | ProgRem:775.6m | +5.7%
+🔥 SSR ON 6.0s | T=330.3C | 60.0% [+5.6%] | Base=40.0%
+4m | 330.3 | 335.88 | +5.58 | -0.46 | 6.0s | ON  | S3-RAMP | SegRem:55.8m | ProgRem:775.4m | +5.6%
+🔥 SSR ON 6.0s | T=330.3C | 60.0% [+5.3%] | Base=40.0%
+4m | 330.3 | 335.98 | +5.68 | -0.33 | 6.0s | ON  | S3-RAMP | SegRem:55.6m | ProgRem:775.3m | +5.3%
+🔥 SSR ON 6.0s | T=330.3C | 60.0% [+5.1%] | Base=40.0%
+4m | 330.3 | 336.08 | +5.78 | -0.26 | 6.0s | ON  | S3-RAMP | SegRem:55.4m | ProgRem:775.1m | +5.1%
+🔥 SSR ON 6.1s | T=330.2C | 61.0% [+4.8%] | Base=40.0%
+📊 COMP 4.8% | Rate_avg=-0.35C/min | Hist=5
+5m | 330.2 | 336.19 | +5.99 | -0.26 | 6.1s | ON  | S3-RAMP | SegRem:55.3m | ProgRem:774.9m | +4.8%
+🔥 SSR ON 6.0s | T=330.4C | 60.0% [+4.4%] | Base=40.0%
+5m | 330.4 | 336.29 | +5.89 | -0.07 | 6.0s | ON  | S3-RAMP | SegRem:55.1m | ProgRem:774.8m | +4.4%
+🔥 SSR ON 6.0s | T=330.5C | 60.0% [+4.0%] | Base=40.0%
+5m | 330.5 | 336.39 | +5.89 | +0.0 | 6.0s | ON  | S3-RAMP | SegRem:55.0m | ProgRem:774.6m | +4.0%
+🔥 SSR ON 6.0s | T=330.5C | 60.0% [+3.7%] | Base=40.0%
+5m | 330.5 | 336.49 | +5.99 | +0.0 | 6.0s | ON  | S3-RAMP | SegRem:54.8m | ProgRem:774.4m | +3.7%
+🔥 SSR ON 6.0s | T=330.6C | 60.0% [+3.3%] | Base=40.0%
+5m | 330.6 | 336.59 | +5.99 | +0.13 | 6.0s | ON  | S3-RAMP | SegRem:54.6m | ProgRem:774.3m | +3.3%
+🔥 SSR ON 6.0s | T=330.7C | 60.0% [+2.7%] | Base=40.0%
+5m | 330.7 | 336.69 | +5.99 | +0.33 | 6.0s | ON  | S3-RAMP | SegRem:54.4m | ProgRem:774.1m | +2.7%
+🔥 SSR ON 5.9s | T=330.9C | 59.0% [+2.2%] | Base=40.0%
+6m | 330.9 | 336.8 | +5.9 | +0.4 | 5.9s | ON  | S3-RAMP | SegRem:54.3m | ProgRem:773.9m | +2.2%
+🔥 SSR ON 5.8s | T=331.1C | 58.0% [+1.7%] | Base=40.0%
+6m | 331.1 | 336.9 | +5.8 | +0.53 | 5.8s | ON  | S3-RAMP | SegRem:54.1m | ProgRem:773.8m | +1.7%
+🔥 SSR ON 5.8s | T=331.2C | 58.0% [+1.1%] | Base=40.0%
+6m | 331.2 | 337.0 | +5.8 | +0.6 | 5.8s | ON  | S3-RAMP | SegRem:54.0m | ProgRem:773.6m | +1.1%
+🔥 SSR ON 5.8s | T=331.3C | 58.0% [+0.5%] | Base=40.0%
+6m | 331.3 | 337.11 | +5.81 | +0.73 | 5.8s | ON  | S3-RAMP | SegRem:53.8m | ProgRem:773.4m | +0.5%
+🔥 SSR ON 5.7s | T=331.5C | 57.0% [+0.1%] | Base=40.0%
+6m | 331.5 | 337.21 | +5.71 | +0.73 | 5.7s | ON  | S3-RAMP | SegRem:53.6m | ProgRem:773.2m | +0.1%
+🔥 SSR ON 5.6s | T=331.8C | 56.0% [-0.4%] | Base=40.0%
+6m | 331.8 | 337.32 | +5.52 | +0.86 | 5.6s | ON  | S3-RAMP | SegRem:53.4m | ProgRem:773.1m | -0.4%
+🔥 SSR ON 5.6s | T=332.0C | 56.0% [-0.8%] | Base=40.0%
+7m | 332.0 | 337.42 | +5.42 | +0.99 | 5.6s | ON  | S3-RAMP | SegRem:53.3m | ProgRem:772.9m | -0.8%
+🔥 SSR ON 5.5s | T=332.3C | 55.0% [-1.4%] | Base=40.0%
+7m | 332.3 | 337.52 | +5.22 | +1.12 | 5.5s | ON  | S3-RAMP | SegRem:53.1m | ProgRem:772.8m | -1.4%
+🔥 SSR ON 5.3s | T=332.8C | 53.0% [-2.0%] | Base=40.0%
+7m | 332.8 | 337.62 | +4.82 | +1.38 | 5.3s | ON  | S3-RAMP | SegRem:52.9m | ProgRem:772.6m | -2.0%
+🔥 SSR ON 5.3s | T=333.0C | 53.0% [-2.7%] | Base=40.0%
+7m | 333.0 | 337.72 | +4.72 | +1.38 | 5.3s | ON  | S3-RAMP | SegRem:52.8m | ProgRem:772.4m | -2.7%
+🔥 SSR ON 5.2s | T=333.3C | 52.0% [-3.3%] | Base=40.0%
+7m | 333.3 | 337.83 | +4.53 | +1.45 | 5.2s | ON  | S3-RAMP | SegRem:52.6m | ProgRem:772.2m | -3.3%
+🔥 SSR ON 5.1s | T=333.6C | 51.0% [-3.9%] | Base=40.0%
+7m | 333.6 | 337.93 | +4.33 | +1.58 | 5.1s | ON  | S3-RAMP | SegRem:52.4m | ProgRem:772.1m | -3.9%
+🔥 SSR ON 5.0s | T=333.8C | 50.0% [-4.4%] | Base=40.0%
+8m | 333.8 | 338.03 | +4.23 | +1.67 | 5.0s | ON  | S3-RAMP | SegRem:52.3m | ProgRem:771.9m | -4.4%
+🔥 SSR ON 4.9s | T=334.4C | 49.0% [-5.0%] | Base=40.0%
+8m | 334.4 | 338.13 | +3.73 | +1.93 | 4.9s | ON  | S3-RAMP | SegRem:52.1m | ProgRem:771.8m | -5.0%
+🔥 SSR ON 4.8s | T=334.7C | 48.0% [-5.5%] | Base=40.0%
+8m | 334.7 | 338.23 | +3.53 | +1.93 | 4.8s | ON  | S3-RAMP | SegRem:51.9m | ProgRem:771.6m | -5.5%
+🔥 SSR ON 4.7s | T=335.1C | 47.0% [-6.1%] | Base=40.0%
+8m | 335.1 | 338.34 | +3.24 | +2.07 | 4.7s | ON  | S3-RAMP | SegRem:51.8m | ProgRem:771.4m | -6.1%
+🔥 SSR ON 4.6s | T=335.4C | 46.0% [-6.6%] | Base=40.0%
+8m | 335.4 | 338.44 | +3.04 | +2.07 | 4.6s | ON  | S3-RAMP | SegRem:51.6m | ProgRem:771.2m | -6.6%
+🔥 SSR ON 4.4s | T=336.0C | 44.0% [-7.1%] | Base=40.0%
+8m | 336.0 | 338.54 | +2.54 | +2.13 | 4.4s | ON  | S3-RAMP | SegRem:51.4m | ProgRem:771.1m | -7.1%
+🔥 SSR ON 4.4s | T=336.3C | 44.0% [-7.3%] | Base=40.0%
+9m | 336.3 | 338.64 | +2.34 | +2.2 | 4.4s | ON  | S3-RAMP | SegRem:51.3m | ProgRem:770.9m | -7.3%
+🔥 SSR ON 4.2s | T=336.9C | 42.0% [-7.8%] | Base=40.0%
+9m | 336.9 | 338.75 | +1.85 | +2.37 | 4.2s | ON  | S3-RAMP | SegRem:51.1m | ProgRem:770.7m | -7.8%
+🔥 SSR ON 4.1s | T=337.2C | 41.0% [-8.1%] | Base=40.0%
+9m | 337.2 | 338.86 | +1.66 | +2.37 | 4.1s | ON  | S3-RAMP | SegRem:50.9m | ProgRem:770.6m | -8.1%
+🔥 SSR ON 4.0s | T=337.7C | 40.0% [-8.6%] | Base=40.0%
+9m | 337.7 | 338.96 | +1.26 | +2.57 | 4.0s | ON  | S3-RAMP | SegRem:50.8m | ProgRem:770.4m | -8.6%
+🔥 SSR ON 1.4s | T=338.2C | 14.0% [+0.0%] | Base=14.0%
+9m | 338.2 | 339.06 | +0.86 | +2.51 | 1.4s | ON  | S3-RAMP | SegRem:50.6m | ProgRem:770.2m | +0.0%
+🔥 SSR ON 0.9s | T=338.8C | 9.0% [+0.0%] | Base=9.0%
+9m | 338.8 | 339.16 | +0.36 | +2.7 | 0.9s | ON  | S3-RAMP | SegRem:50.4m | ProgRem:770.1m | +0.0%
+🔥 SSR ON 0.5s | T=339.4C | 5.0% [+0.0%] | Base=5.0%
+📊 COMP 0.0% | Rate_avg=2.33C/min | Hist=5
+10m | 339.4 | 339.26 | -0.14 | +2.84 | 0.5s | ON  | S3-RAMP | SegRem:50.2m | ProgRem:769.9m | +0.0%
+🔥 SSR ON 0.5s | T=339.8C | 5.0% [+0.0%] | Base=5.0%
+10m | 339.8 | 339.37 | -0.43 | +2.9 | 0.5s | ON  | S3-RAMP | SegRem:50.1m | ProgRem:769.7m | +0.0%  - incepe problema sst permanent off
+10m | 340.2 | 339.47 | -0.73 | +2.77 | 0.0s | OFF | S3-RAMP | SegRem:49.9m | ProgRem:769.6m | +0.0%
+10m | 340.9 | 339.57 | -1.33 | +3.03 | 0.0s | OFF | S3-RAMP | SegRem:49.8m | ProgRem:769.4m | +0.0%
+10m | 341.5 | 339.67 | -1.83 | +3.07 | 0.0s | OFF | S3-RAMP | SegRem:49.6m | ProgRem:769.2m | +0.0%
+10m | 342.0 | 339.77 | -2.23 | +3.2 | 0.0s | OFF | S3-RAMP | SegRem:49.4m | ProgRem:769.1m | +0.0%
+11m | 342.6 | 339.9 | -2.7 | +3.2 | 0.0s | OFF | S3-RAMP | SegRem:49.2m | ProgRem:768.9m | +0.0%
+11m | 343.2 | 340.0 | -3.2 | +3.26 | 0.0s | OFF | S3-RAMP | SegRem:49.0m | ProgRem:768.7m | +0.0%
+11m | 343.7 | 340.1 | -3.6 | +3.2 | 0.0s | OFF | S3-RAMP | SegRem:48.9m | ProgRem:768.5m | +0.0%
+11m | 344.3 | 340.2 | -4.1 | +3.2 | 0.0s | OFF | S3-RAMP | SegRem:48.7m | ProgRem:768.4m | +0.0%
+11m | 344.9 | 340.3 | -4.6 | +3.33 | 0.0s | OFF | S3-RAMP | SegRem:48.6m | ProgRem:768.2m | +0.0%
+11m | 345.4 | 340.41 | -4.99 | +3.39 | 0.0s | OFF | S3-RAMP | SegRem:48.4m | ProgRem:768.0m | +0.0%
+12m | 345.8 | 340.51 | -5.29 | +3.2 | 0.0s | OFF | S3-RAMP | SegRem:48.2m | ProgRem:767.9m | +0.0%
+12m | 346.4 | 340.61 | -5.79 | +3.2 | 0.0s | OFF | S3-RAMP | SegRem:48.0m | ProgRem:767.7m | +0.0%
+12m | 347.0 | 340.71 | -6.29 | +3.26 | 0.0s | OFF | S3-RAMP | SegRem:47.9m | ProgRem:767.5m | +0.0%
+12m | 347.5 | 340.81 | -6.69 | +3.27 | 0.0s | OFF | S3-RAMP | SegRem:47.7m | ProgRem:767.4m | +0.0%
+12m | 348.1 | 340.92 | -7.18 | +3.27 | 0.0s | OFF | S3-RAMP | SegRem:47.6m | ProgRem:767.2m | +0.0%
+12m | 348.6 | 341.02 | -7.58 | +3.27 | 0.0s | OFF | S3-RAMP | SegRem:47.4m | ProgRem:767.0m | +0.0%
+13m | 349.0 | 341.13 | -7.87 | +3.1 | 0.0s | OFF | S3-RAMP | SegRem:47.2m | ProgRem:766.8m | +0.0%
+13m | 349.6 | 341.23 | -8.37 | +3.1 | 0.0s | OFF | S3-RAMP | SegRem:47.0m | ProgRem:766.7m | +0.0%
+13m | 350.0 | 341.33 | -8.67 | +3.03 | 0.0s | OFF | S3-RAMP | SegRem:46.9m | ProgRem:766.5m | +0.0%
+13m | 350.4 | 341.44 | -8.96 | +3.03 | 0.0s | OFF | S3-RAMP | SegRem:46.7m | ProgRem:766.4m | +0.0%
+13m | 350.9 | 341.54 | -9.36 | +2.97 | 0.0s | OFF | S3-RAMP | SegRem:46.5m | ProgRem:766.2m | +0.0%
+13m | 351.3 | 341.64 | -9.66 | +2.84 | 0.0s | OFF | S3-RAMP | SegRem:46.4m | ProgRem:766.0m | +0.0%
+14m | 351.7 | 341.74 | -9.96 | +2.77 | 0.0s | OFF | S3-RAMP | SegRem:46.2m | ProgRem:765.8m | +0.0%
+14m | 352.1 | 341.84 | -10.26 | +2.64 | 0.0s | OFF | S3-RAMP | SegRem:46.0m | ProgRem:765.7m | +0.0%
+14m | 352.6 | 341.94 | -10.66 | +2.64 | 0.0s | OFF | S3-RAMP | SegRem:45.9m | ProgRem:765.5m | +0.0%
+14m | 353.0 | 342.06 | -10.94 | +2.64 | 0.0s | OFF | S3-RAMP | SegRem:45.7m | ProgRem:765.3m | +0.0%
+14m | 353.3 | 342.16 | -11.14 | +2.44 | 0.0s | OFF | S3-RAMP | SegRem:45.5m | ProgRem:765.2m | +0.0%
+15m | 353.6 | 342.26 | -11.34 | +2.37 | 0.0s | OFF | S3-RAMP | SegRem:45.4m | ProgRem:765.0m | +0.0%
+📊 COMP 0.0% | Rate_avg=2.33C/min | Hist=5
+15m | 354.1 | 342.36 | -11.74 | +2.44 | 0.0s | OFF | S3-RAMP | SegRem:45.2m | ProgRem:764.8m | +0.0%
+15m | 354.3 | 342.46 | -11.84 | +2.24 | 0.0s | OFF | S3-RAMP | SegRem:45.0m | ProgRem:764.7m | +0.0%
+15m | 354.7 | 342.57 | -12.13 | +2.24 | 0.0s | OFF | S3-RAMP | SegRem:44.8m | ProgRem:764.5m | +0.0%
+15m | 355.1 | 342.67 | -12.43 | +2.24 | 0.0s | OFF | S3-RAMP | SegRem:44.7m | ProgRem:764.3m | +0.0%
+15m | 355.3 | 342.77 | -12.53 | +2.11 | 0.0s | OFF | S3-RAMP | SegRem:44.5m | ProgRem:764.2m | +0.0%
+16m | 355.6 | 342.87 | -12.73 | +1.98 | 0.0s | OFF | S3-RAMP | SegRem:44.4m | ProgRem:764.0m | +0.0%
+16m | 355.8 | 342.97 | -12.83 | +1.87 | 0.0s | OFF | S3-RAMP | SegRem:44.2m | ProgRem:763.8m | +0.0%
+16m | 356.0 | 343.09 | -12.91 | +1.78 | 0.0s | OFF | S3-RAMP | SegRem:44.0m | ProgRem:763.6m | +0.0%
+16m | 356.4 | 343.19 | -13.21 | +1.85 | 0.0s | OFF | S3-RAMP | SegRem:43.8m | ProgRem:763.5m | +0.0%
+16m | 356.6 | 343.29 | -13.31 | +1.65 | 0.0s | OFF | S3-RAMP | SegRem:43.7m | ProgRem:763.3m | +0.0%
+16m | 356.7 | 343.39 | -13.31 | +1.58 | 0.0s | OFF | S3-RAMP | SegRem:43.5m | ProgRem:763.2m | +0.0%
+17m | 357.0 | 343.49 | -13.51 | +1.52 | 0.0s | OFF | S3-RAMP | SegRem:43.3m | ProgRem:763.0m | +0.0%
+
+🛑 STOP FORTAT | Seg3 ramp | Elapsed: 17.3min | Target: 370.0C
+>>>  fail total ramp 1.41 grade pe minut 
+ cod claude fail, necesita fixurie manuala permanenta, nu tine cont de limbaj programare micropython, genereaza erori sintaxa program no start, user debug manual o ora
